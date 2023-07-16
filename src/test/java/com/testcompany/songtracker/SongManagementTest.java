@@ -17,7 +17,6 @@ public class SongManagementTest {
                     .playSong("S3", "User1")
                     .build();
 
-
         List<String> recentlyPlayedSongs = store.getRecentlyPlayed("User1");
         Assertions.assertEquals(3, recentlyPlayedSongs.size());
         Assertions.assertEquals("S3", recentlyPlayedSongs.get(0));
@@ -34,7 +33,6 @@ public class SongManagementTest {
                     .playSong("S1", "User1")
                 .build();
 
-
         List<String> recentlyPlayedSongs = store.getRecentlyPlayed("User1");
         Assertions.assertEquals(3, recentlyPlayedSongs.size());
         Assertions.assertEquals("S1", recentlyPlayedSongs.get(0));
@@ -50,7 +48,6 @@ public class SongManagementTest {
                     .playSong("S3", "User1")
                     .playSong("S4", "User1")
                 .build();
-
 
         List<String> recentlyPlayedSongs = store.getRecentlyPlayed("User1");
         Assertions.assertEquals(3, recentlyPlayedSongs.size());
@@ -71,9 +68,7 @@ public class SongManagementTest {
         Assertions.assertThrows(SongManagementException.class, () -> {
             store.playSong("", "User1");
         });
-
     }
-
 
     @Test
     public void testGetRecentlyPlayed() {
@@ -90,5 +85,4 @@ public class SongManagementTest {
             store.getRecentlyPlayed("User3");
         });
     }
-
 }

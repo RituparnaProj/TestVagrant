@@ -55,7 +55,7 @@ public class SongManagementServiceImpl implements SongManagementService {
     }
 
     public List<String> getRecentlyPlayed(String user) throws SongManagementException {
-        if(StringUtils.isEmpty(user)) throw new SongManagementException(
+        if (StringUtils.isEmpty(user)) throw new SongManagementException(
                 SongManagementExceptionCode.USER_NULL_OR_EMPTY.getErrorCode(),
                 SongManagementExceptionCode.USER_NULL_OR_EMPTY.getErrorMessage());
 
@@ -70,5 +70,4 @@ public class SongManagementServiceImpl implements SongManagementService {
                         SongManagementExceptionCode.NO_RECORDS_FOUND.getErrorMessage()));
 
     }
-
 }
