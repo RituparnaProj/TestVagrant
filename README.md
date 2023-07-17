@@ -6,7 +6,13 @@ These tests have been done with language java and used build tool as maven
 2. Download Java 11
 3. Setup environment variables for the JDK
 
-**Running Web Tests**
+**Overview**
+This application has created in-memory store for recently played songs that can accommodate N songs 
+per user, with a fixed initial capacity of 3. This store has capability to store a list of song-user pairs,
+with each song linked to a user. It has the ability to fetch recently played songs based on the 
+user and eliminate the least recently played songs when the store becomes full.
+
+**Running Tests**
 1. Clone the repo
 2. Run the 'SongManagementTest' located at src/test/java/com/testcompany/songtracker/SongManagementTest.java
 3. SongManagementTest has the following scenarios covered:
